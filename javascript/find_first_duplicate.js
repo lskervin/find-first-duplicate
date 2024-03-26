@@ -1,6 +1,15 @@
 function findFirstDuplicate(arr) {
   // type your code here
-}
+  let seen = {}
+  for (let i = 0; i < arr.length; i++){
+    if (seen[arr[i]]){
+      return arr[i]
+    } else {
+      seen[arr[i]] = true
+    }
+  }
+  return -1
+};
 
 if (require.main === module) {
   // add your own tests in here
